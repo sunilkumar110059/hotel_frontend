@@ -90,8 +90,6 @@ function BookingForm() {
                             <div className="col-auto py-2 px-3 bg-gray-300 border-1-left border-gray-400"> <SlCalender /></div>
                         </div>
                     </div>
-
-
                     <div className="my-2 col-12 col-md">
                         <label className="mb-1 fw-bold"> Check Out</label>
                         <div className="row gx-0 border-1 border-gray-400">
