@@ -1,0 +1,88 @@
+
+
+*, *::before, *::after {margin: 0;padding: 0;box-sizing: border-box;outline: none;}
+@media (prefers-reduced-motion:no-preference) {:root {scroll-behavior: smooth;}}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h6, h5, h4, h3, h2, h1 {font-weight: 500;}
+hr {margin: 1rem 0;color: inherit;background-color: currentColor;border: 0;opacity: 0.25;}
+hr:not([size]) {height: 1px;}
+p {margin-top: 0;margin-bottom: 1rem;}
+
+abbr[title],
+abbr[data-bs-original-title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+[list]::-webkit-calendar-picker-indicator {display: none;}
+[role=button] {cursor: pointer;}
+a {text-decoration: none;}
+a:not([href]):not([class]), a:not([href]):not([class]):hover {color: inherit;text-decoration: none;}
+a>code {color: inherit;}
+address {margin-bottom: 1rem;font-style: normal;line-height: inherit;}
+b, strong {font-weight: bolder;}
+blockquote {margin: 0 0 1rem;}
+button {border-radius: 0;}
+button, [type=button], [type=reset], [type=submit] {-webkit-appearance: button;}
+button, select {text-transform: none;}
+button:focus:not(:focus-visible) {outline: 0;}
+button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {cursor: pointer;}
+caption {padding-top: 0.5rem;padding-bottom: 0.5rem;color: #6c757d;text-align: left;}
+code {font-size: 0.875em;color: #d63384;word-wrap: break-word;}
+dd {margin-bottom: 0.5rem;margin-left: 0;}
+dt {font-weight: 700;}
+fieldset {min-width: 0;padding: 0;margin: 0;border: 0;}
+figure {margin: 0 0 1rem;}
+img, svg {vertical-align: middle;}
+input, button, select, optgroup, textarea {margin: 0;font-family: inherit;font-size: inherit;line-height: inherit; border:none;}
+kbd {padding: 0.2rem 0.4rem;font-size: 0.875em;color: #fff;background-color: #212529;border-radius: 0.2rem;}
+kbd kbd {padding: 0;font-size: 1em;font-weight: 700;}
+label {display: inline-block;}
+legend {float: left;width: 100%;padding: 0;margin-bottom: 0.5rem;font-size: calc(1.275rem + 0.3vw);line-height: inherit;}
+li {list-style-type: none;}
+mark {padding: 0.2em;background-color: #fcf8e3;}
+pre {display: block;margin-top: 0;margin-bottom: 1rem;overflow: auto;font-size: 0.875em;}
+pre code {font-size: inherit;color: inherit;word-break: normal;}
+pre, code, kbd, samp {font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size: 1em;direction: ltr;unicode-bidi: bidi-override;}
+select {word-wrap: normal;}
+select:disabled {opacity: 1;}
+small {font-size: 0.875em;}
+sub {bottom: -0.25em;}
+sub, sup {position: relative;font-size: 0.75em;line-height: 0;vertical-align: baseline;}
+sup {top: -0.5em;}
+table {caption-side: bottom;border-collapse: collapse;}
+textarea {resize: vertical;}
+th {text-align: inherit;text-align: -webkit-match-parent;}
+thead, tbody, tfoot, tr, td, th {border-color: inherit;border-style: solid;border-width: 0;}
+::-moz-focus-inner {padding: 0;border-style: none;}
+
+@media (min-width:1200px) {legend {font-size: 1.5rem;}}
+legend+* {clear: left;}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field { padding: 0}
+::-webkit-inner-spin-button {height: auto;}
+
+[type=search] {outline-offset: -2px;-webkit-appearance: textfield;}
+::-webkit-color-swatch-wrapper {padding: 0;}
+::-webkit-file-upload-button {font: inherit;-webkit-appearance: button;}
+::-webkit-search-decoration {-webkit-appearance: none;}
+::file-selector-button {font: inherit;}
+
+[hidden] {display: none !important;}
+iframe {border: 0;}
+output {display: inline-block;}
+progress {vertical-align: baseline;}
+summary {display: list-item;cursor: pointer;}
