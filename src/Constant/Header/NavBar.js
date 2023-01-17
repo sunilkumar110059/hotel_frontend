@@ -1,10 +1,9 @@
 import React from 'react';
-import { ROUTE_NAV } from './RoutePath/RoutePathIndex';
+import { ROUTE_NAV } from '../RoutePath/RoutePathIndex';
 import { Link, NavLink } from 'react-router-dom';
 
 function NavBar() {
     return (
-
         <div className="row">
             <div className="col-auto">
                 <Link to={'/'} className="fs-2 fw-bolder text-white">LOGO</Link>
@@ -13,9 +12,11 @@ function NavBar() {
                 <nav className='navcol'>
                     <ul>
                         <li> <NavLink to={ROUTE_NAV.HOME_PATH} > Home </NavLink></li>
-                        <li> <NavLink to={ROUTE_NAV.ABOUT_PATH}> About </NavLink></li>
+                        {/* <li> <NavLink to={ROUTE_NAV.ABOUT_PATH}> About </NavLink></li>
                         <li> <NavLink to={ROUTE_NAV.SERVICE_PATH}> Service </NavLink></li>
-                        <li> <NavLink to={ROUTE_NAV.CONTACT_PATH}> Contact </NavLink></li>
+                        <li> <NavLink to={ROUTE_NAV.CONTACT_PATH}> Contact </NavLink></li> */}
+                        <li> <NavLink to={ROUTE_NAV.HOTEL_LIST_PATH}> Hotel List </NavLink></li>
+                        <li> <NavLink to={ROUTE_NAV.HOTEL_DETAIL_PATH}> Hotel Detail </NavLink></li>                                            
                     </ul>
                 </nav>
             </div>

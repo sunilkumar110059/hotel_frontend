@@ -10,7 +10,7 @@ function Input(props) {
         <Fragment>
             {labelText && <label className={`form-label ${labelStyleClass}`} htmlFor={inputStyleId} > {labelText}</label>}
             <input
-                className={`form-control ${inputStyleClass}`}
+                className={`form-control p-2 ${inputStyleClass}`}
                 id={inputStyleId}
                 autoComplete={autoComplete}
                 type={type}
@@ -41,7 +41,6 @@ Input.defaultProps = {
 // <Input
 // labelText = { 'Text With Label'}
 // labelStyleClass = { 'd-block mb-1 fw-bold'}
-// formStyleClass = { 'border1 bordercolor2_4'}
 // inputStyleClass = { 'p-2'}
 // inputStyleId = { 'inputid'}
 // autoComplete = { 'on'}

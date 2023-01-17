@@ -3,6 +3,10 @@
 *, *::before, *::after {margin: 0;padding: 0;box-sizing: border-box;outline: none;}
 @media (prefers-reduced-motion:no-preference) {:root {scroll-behavior: smooth;}}
 
+body, html{
+  height: 100%;
+}
+
 body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -40,7 +44,7 @@ dd {margin-bottom: 0.5rem;margin-left: 0;}
 dt {font-weight: 700;}
 fieldset {min-width: 0;padding: 0;margin: 0;border: 0;}
 figure {margin: 0 0 1rem;}
-img, svg {vertical-align: middle;}
+img, svg {vertical-align: middle; max-width:100%;}
 input, button, select, optgroup, textarea {margin: 0;font-family: inherit;font-size: inherit;line-height: inherit; border:none;}
 kbd {padding: 0.2rem 0.4rem;font-size: 0.875em;color: #fff;background-color: #212529;border-radius: 0.2rem;}
 kbd kbd {padding: 0;font-size: 1em;font-weight: 700;}
@@ -86,3 +90,28 @@ iframe {border: 0;}
 output {display: inline-block;}
 progress {vertical-align: baseline;}
 summary {display: list-item;cursor: pointer;}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color:var(--black);
+  background-color: var(--white);
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color:var(--black);
+  background-color: var(--white);
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

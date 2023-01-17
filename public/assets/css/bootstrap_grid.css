@@ -1,18 +1,11 @@
 
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
+.container, .container-fluid, .container-xxl,.container-xl,.container-lg,.container-md,.container-sm {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
 }
-
 
 .row {
   --bs-gutter-x: 1.5rem;
@@ -110,8 +103,10 @@
 .d-inline-flex {display: inline-flex;}
 .d-none {display: none;}
 .d-table {display: table;}
+.d-table-layout-fixed {table-layout: fixed;width: 100%;}
 .d-table-cell {display: table-cell;}
 .d-table-row {display: table-row;}
+
 
 .flex-column {flex-direction: column;}
 .flex-column-reverse {flex-direction: column-reverse;}

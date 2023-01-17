@@ -113,7 +113,7 @@ a {color: var(--black);}
 
 
 .overlay_1{background-color: rgba(0, 0, 0, 0.7);}
-.shadow1{box-shadow:var(--shadow1)}
+.shadow1{box-shadow: rgba(0, 0, 0, 17%) 0px 3px 8px 1px;}
 
 
 

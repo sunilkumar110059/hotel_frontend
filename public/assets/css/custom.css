@@ -18,3 +18,25 @@
 .authcol > ul{ display:flex;flex-wrap: wrap;}
 .authcol > ul> li{ flex: 0 0 auto; }
 .authcol > ul > li>a{ display:block; padding: 10px 15px; color: var(--white);}
+
+.font-10{font-size: 10px;}
+.font-12{font-size: 12px;}
+.font-14{font-size: 14px;}
+.font-16{font-size: 16px;}
+.font-18{font-size: 18px;}
+.font-20{font-size: 20px;}
+
+
+.pricecol{
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+    justify-content: center;
+    text-align: center;
+}
+@media (max-width: 993px) {
+    .pricecol{
+        border-left:none;
+    }
+ .room-list .seprater{display: none;}
+}
