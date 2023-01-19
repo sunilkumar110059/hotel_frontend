@@ -2,17 +2,20 @@ import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import { Input } from '../../Shared/SharedIndex';
 import { SlCalender } from 'react-icons/sl';
-import { FaPlus, FaMinus } from 'react-icons/fa'
-function BookingForm() {
+import { FaPlus, FaMinus } from 'react-icons/fa';
+
+function BookingForm(props) {
+    const { ButtonText, getBookingFormFn } = props
+
     const [isOpen, setIsOpenFun] = useState(false);
     const [BookingState, SetBookingStateFn] = useState({
         location: "",
         checkin: "",
         checkout: "",
-        room: 1,
-        guest: 1
+        adult: 1,
+        children: 1
     })
-    const { location, checkin, checkout, room, guest } = BookingState;
+    const { location, checkin, checkout, adult, children } = BookingState;
     const bookingHandle = (str, parm) => {
         if (str === "LOCATION") {
             SetBookingStateFn({
@@ -33,38 +36,39 @@ function BookingForm() {
             })
         }
 
-        if (str === "ROOM_DEC" && room > 1) {
+        if (str === "ROOM_DEC" && adult > 1) {
             SetBookingStateFn({
                 ...BookingState,
-                room: room - 1
+                adult: adult - 1
             })
 
         }
         else if (str === "ROOM_INC") {
             SetBookingStateFn({
                 ...BookingState,
-                room: room + 1
+                adult: adult + 1
             })
         }
 
-        else if (str === "GUEST_DEC" && guest > 1) {
+        else if (str === "GUEST_DEC" && children > 1) {
             SetBookingStateFn({
                 ...BookingState,
-                guest: guest - 1
+                children: children - 1
             })
         }
 
         else if (str === "GUEST_INC") {
             SetBookingStateFn({
                 ...BookingState,
-                guest: guest + 1
+                children: children + 1
             })
         }
     }
 
     const handleCalendarClose = () => { setIsOpenFun(!isOpen) }
+
     const searchHandle = () => {
-        console.log(BookingState)
+        getBookingFormFn(BookingState)
     }
 
     return (
@@ -118,23 +122,23 @@ function BookingForm() {
             </div>
 
             <div className="my-2 col-6 col-md-2">
-                <label className="mb-2 fw-bold"> Rooms</label>
+                <label className="mb-2 fw-bold"> Adult</label>
                 <div className="row gx-0 border-1 border-gray-400 ">
                     <div className="col-auto py-2 px-3 bg-gray-300 border-1-right border-gray-400" onClick={() => bookingHandle("ROOM_DEC")}><FaMinus /></div>
-                    <div className="col d-flex align-items-center justify-content-center bg-white border_left1 border_right1 bordercolor2_4"> <span>{room}</span></div>
+                    <div className="col d-flex align-items-center justify-content-center bg-white border_left1 border_right1 bordercolor2_4"> <span>{adult}</span></div>
                     <div className="col-auto py-2 px-3 bg-gray-300 border-1-left border-gray-400" onClick={() => bookingHandle("ROOM_INC")}> <FaPlus /></div>
                 </div>
             </div>
             <div className="my-2  col-6 col-md-2">
-                <label className="mb-2 fw-bold"> Guest</label>
+                <label className="mb-2 fw-bold"> Children</label>
                 <div className="row gx-0 border-1 border-gray-400">
                     <div className="col-auto py-2 px-3 bg-gray-300 border-1-right border-gray-400" onClick={() => bookingHandle("GUEST_DEC")}><FaMinus /></div>
-                    <div className="col d-flex align-items-center justify-content-center bg-white border_left1 border_right1 bordercolor2_4"> <span>{guest}</span></div>
+                    <div className="col d-flex align-items-center justify-content-center bg-white border_left1 border_right1 bordercolor2_4"> <span>{children}</span></div>
                     <div className="col-auto py-2 px-3 bg-gray-300 border-1-left border-gray-400" onClick={() => bookingHandle("GUEST_INC")}> <FaPlus /></div>
                 </div>
             </div>
             <div className="my-2 col-auto">
-                <button type="button" className="btn btn-primary py-2 px-3" onClick={() => searchHandle()}>Search</button>
+                <button type="button" className="btn btn-primary py-2 px-3" onClick={() => searchHandle()}>{ButtonText}</button>
             </div>
         </div>
 

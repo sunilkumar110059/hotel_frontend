@@ -5,7 +5,7 @@ function Listing() {
         <div className='cover mb-5 border-1 border-gray-300 shadow1'>
             <div className='row g-0'>
                 <div className="col-12 col-lg-3">
-                    <img className='h-100' src='assets/images/img1.jpg' alt='package' />
+                    <img className='h-100' src='/assets/images/img1.jpg' alt='package' />
                 </div>
 
                 <div className='col-12 col-lg-7 py-2 px-4 font-16 room-list'>
@@ -42,7 +42,6 @@ function Listing() {
                         <div className='col-12 col-lg py-1'>Parking, Reception, Free Wifi</div>
                     </div>
                 </div>
-
                 <div className="col-12 col-md">
                     <div className='pricecol p-3 border-1-left border-gray-300 bg-gray-200'>
                         <div className='cover mb-3 fw-bold'>

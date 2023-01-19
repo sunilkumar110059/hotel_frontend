@@ -17,8 +17,8 @@ function App() {
       <div className='bodypart'>
         <Routes>
           <Route path={ROUTE_NAV.HOME_PATH} element={<HomeIndex />} />
-          <Route path={ROUTE_NAV.HOTEL_LIST_PATH} element={<HotelListIndex />} /> 
-          <Route path={ROUTE_NAV.HOTEL_DETAIL_PATH} element={<HotelDetailIndex />} />           
+          <Route path={`${ROUTE_NAV.HOTEL_LIST_PATH}/:id`} element={<HotelListIndex />} />
+          <Route path={ROUTE_NAV.HOTEL_DETAIL_PATH} element={<HotelDetailIndex />} />
           <Route path={'*'} element={<PageNotFoundIndex />} />
         </Routes>
       </div>
